@@ -22,7 +22,7 @@ A beautiful, interactive fractal visualization tool built with React that lets y
     ↳ Reset: 💫 One-click magic
 
 
-🎨 COLOR SCHEMES:  
+💾 COLOR SCHEMES:  
 
     ▸ Download as HD PNG          
     ▸ Bookmark favorite views        
