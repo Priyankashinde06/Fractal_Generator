@@ -125,7 +125,7 @@ export default function ControlsPanel({
         </Grid>
 
         {/* Color Scheme Selector */}
-        <Grid item xs={12} sm={6} sx={{ml: -2}}>
+        <Grid item xs={12} sm={6} >
           <FormControl fullWidth>
             <InputLabel>Color Scheme</InputLabel>
             <Select

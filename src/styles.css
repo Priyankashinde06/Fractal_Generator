@@ -74,9 +74,7 @@ canvas {
     .MuiIconButton-root {
         padding: 6px !important;
     }
-    .css-skux33-MuiGrid-root{
-        margin-left: 0px !important;
-    }
+    
     .MuiTextField-root,
     .MuiFormControl-root {
         margin-bottom: 8px !important;
