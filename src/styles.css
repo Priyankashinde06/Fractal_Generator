@@ -13,11 +13,13 @@ body {
         width: 100%;
         padding: 10px;
     }
-    .canvas-wrapper{
+
+    .canvas-wrapper {
         width: 90% !important;
         margin-right: 10px;
     }
 }
+
 .fractal-container {
     padding: 20px;
     display: flex;
@@ -40,4 +42,69 @@ body {
 canvas {
     max-width: 100%;
     height: auto;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .fractal-container {
+        padding: 0 12px !important;
+    }
+
+    .canvas-wrapper {
+        margin: 0 -12px;
+    }
+
+    .MuiPaper-root {
+        padding: 12px !important;
+    }
+
+    .MuiGrid-container {
+        display: flex !important;
+        /* align-items: center; */
+        gap: 12px !important;
+        flex-direction: column !important;
+        justify-content: center;
+    }
+
+    .MuiButton-root {
+        padding: 6px 8px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .MuiIconButton-root {
+        padding: 6px !important;
+    }
+    .css-skux33-MuiGrid-root{
+        margin-left: 0px !important;
+    }
+    .MuiTextField-root,
+    .MuiFormControl-root {
+        margin-bottom: 8px !important;
+    }
+
+    .MuiTypography-h4 {
+        font-size: 1.5rem !important;
+    }
+
+    .MuiTypography-subtitle1 {
+        font-size: 0.9rem !important;
+    }
+
+    /* Make controls panel more compact */
+    .MuiGrid-item {
+        padding: 4px !important;
+    }
+
+    /* Adjust navigation buttons */
+    .MuiBox-root {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Make view history buttons smaller */
+    .MuiButton-outlinedSizeSmall {
+        padding: 2px 4px !important;
+        font-size: 0.7rem !important;
+        min-width: 40px !important;
+    }
 }
