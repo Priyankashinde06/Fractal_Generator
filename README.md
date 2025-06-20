@@ -1,4 +1,5 @@
 🌌✨ FRACTAL EXPLORER ✨🌌
+
 A beautiful, interactive fractal visualization tool built with React that lets you explore the infinite complexity of mathematical fractals.
 
 # FEATURES  
