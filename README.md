@@ -11,9 +11,9 @@ A beautiful, interactive fractal visualization tool built with React that lets y
 
 🎨 COLOR SCHEMES:  
 
-    🔘 Classic         🔘 Fiery
-    🔘 Grayscale    🔘 Oceanic
-    🔘 Psychedelic 🔘 Forest
+    🔘 Classic          🔘 Fiery
+    🔘 Grayscale        🔘 Oceanic
+    🔘 Psychedelic      🔘 Forest
 
 🕹️ INTERACTIVE CONTROLS:
 
@@ -32,7 +32,9 @@ A beautiful, interactive fractal visualization tool built with React that lets y
 📱 RESPONSIVE DESIGN:
     Works on all devices from desktop to smartwatch!
 
+
 ⚡ Technologies Used⚡
+
     •	React
     •	Material-UI for UI components
     •	Canvas API for fractal rendering
