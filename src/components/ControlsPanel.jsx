@@ -56,21 +56,20 @@ export default function ControlsPanel({
         <Grid item xs={12} sm={6} md={4}>
           <Tooltip title="Cycle through different fractal types" placement="top">
             <Button
-  fullWidth
-  variant="contained"
-  color="primary"
-  onClick={() => {
-    const types = ["mandelbrot", "julia", "burning-ship", "mandelbar"];
-    const currentIndex = types.indexOf(fractalType);
-    setFractalType(types[(currentIndex + 1) % types.length]);
-  }}
->
-  Switch to{" "}
-  {fractalType === "mandelbrot" ? "Julia" : 
-   fractalType === "julia" ? "Burning Ship" : 
-   fractalType === "burning-ship" ? "Mandelbar" :
-   "Mandelbrot"}
-</Button>
+              fullWidth
+              variant="contained"
+              color="primary"
+              onClick={() => {
+                const types = ["mandelbrot", "julia", "burning-ship", "tricorn", "mandelbar"];
+                const currentIndex = types.indexOf(fractalType);
+                setFractalType(types[(currentIndex + 1) % types.length]);
+              }}
+            >
+              Current: {fractalType === "mandelbrot" ? "Mandelbrot" : 
+                       fractalType === "julia" ? "Julia" : 
+                       fractalType === "burning-ship" ? "Burning Ship" :
+                       fractalType === "tricorn" ? "Tricorn" : "Mandelbar"}
+            </Button>
           </Tooltip>
         </Grid>
 
@@ -242,6 +241,20 @@ export default function ControlsPanel({
           </Box>
         </Grid>
 
+        {/* Status Info */}
+        <Grid item xs={12}>
+          <Box display="flex" justifyContent="center" alignItems="center" gap={1}>
+            <Typography variant="caption">
+              Zoom: {Math.round(zoom)}x | Position: ({offsetX.toFixed(4)}, {offsetY.toFixed(4)})
+            </Typography>
+            <Tooltip 
+              title="Mouse coordinates are shown when hovering over the fractal" 
+              placement="top"
+            >
+              <Info fontSize="small" color="action" />
+            </Tooltip>
+          </Box>
+        </Grid>
       </Grid>
     </Paper>
   );
