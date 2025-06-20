@@ -47,7 +47,7 @@ canvas {
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     .fractal-container {
-        padding: 0 12px !important;
+         padding: 23px 12px !important;
     }
 
     .canvas-wrapper {
