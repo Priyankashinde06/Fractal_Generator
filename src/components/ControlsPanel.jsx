@@ -10,8 +10,7 @@ import {
   Typography,
   IconButton,
   Box,
-  Divider,
-  Tooltip
+  Tooltip,
 } from "@mui/material";
 import {
   ZoomIn,
@@ -22,15 +21,15 @@ import {
   NavigateNext,
   ArrowUpward,
   ArrowDownward,
-  Save,
-  Info
+  Bookmark,
+  History,
 } from "@mui/icons-material";
 
 export default function ControlsPanel({
   fractalType,
   setFractalType,
-  animateZoom,
   zoom,
+  animateZoom,
   offsetX,
   offsetY,
   resetView,
@@ -47,214 +46,207 @@ export default function ControlsPanel({
   saveView,
   viewHistory,
   restoreView,
-  handleKeyDown
 }) {
   return (
-    <Paper elevation={2} sx={{ p: 3, mb: 3 }} onKeyDown={handleKeyDown} tabIndex={0}>
-      <Grid container spacing={1} justifyContent="center">
+    <Paper elevation={2} sx={{ p: 2, mb: 3, mt: 1 }}>
+      <Grid container spacing={2}>
         {/* Fractal Type Switch */}
-        <Grid item xs={12} sm={6} md={4}>
-          <Tooltip title="Cycle through different fractal types" placement="top">
-            <Button
-              fullWidth
-              variant="contained"
-              color="primary"
-              onClick={() => {
-                const types = ["mandelbrot", "julia", "burning-ship", "tricorn", "mandelbar"];
-                const currentIndex = types.indexOf(fractalType);
-                setFractalType(types[(currentIndex + 1) % types.length]);
-              }}
-            >
-              Current: {fractalType === "mandelbrot" ? "Mandelbrot" : 
-                       fractalType === "julia" ? "Julia" : 
-                       fractalType === "burning-ship" ? "Burning Ship" :
-                       fractalType === "tricorn" ? "Tricorn" : "Mandelbar"}
-            </Button>
-          </Tooltip>
+        <Grid item xs={12} sm={6}>
+          <Button
+            fullWidth
+            variant="contained"
+            color="primary"
+            onClick={() => {
+              setFractalType(
+                fractalType === "mandelbrot"
+                  ? "julia"
+                  : fractalType === "julia"
+                  ? "burning-ship"
+                  : "mandelbrot"
+              );
+            }}
+          >
+            Switch to{" "}
+            {fractalType === "mandelbrot"
+              ? "Julia Set"
+              : fractalType === "julia"
+              ? "Burning Ship"
+              : "Mandelbrot Set"}
+          </Button>
         </Grid>
 
         {/* Zoom Controls */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} sx={{ml: -1}}>
           <Box display="flex" justifyContent="center" gap={0}>
-            <Tooltip title="Zoom in (also + key)" placement="top">
-              <IconButton
-                color="primary"
-                onClick={() => animateZoom(zoom * 1.5, offsetX, offsetY)}
-                aria-label="Zoom in"
-              >
+            <Tooltip title="Zoom in">
+              <IconButton onClick={() => animateZoom(zoom * 1.5,offsetX, offsetY)}>
                 <ZoomIn />
               </IconButton>
             </Tooltip>
-            <Tooltip title="Zoom out (also - key)" placement="top">
-              <IconButton
-                color="primary"
-                onClick={() => animateZoom(zoom / 1.5, offsetX, offsetY)}
-                aria-label="Zoom out"
-              >
+            <Tooltip title="Zoom out">
+              <IconButton onClick={() => animateZoom(zoom / 1.5,offsetX, offsetY)}>
                 <ZoomOut />
               </IconButton>
             </Tooltip>
-            <Tooltip title="Reset view (also 0 key)" placement="top">
-              <IconButton
-                color="secondary"
-                onClick={resetView}
-                aria-label="Reset view"
-              >
+            <Tooltip title="Reset view">
+              <IconButton onClick={resetView} color="secondary">
                 <RestartAlt />
               </IconButton>
             </Tooltip>
-            <Tooltip title="Download current view as PNG" placement="top">
-              <IconButton
-                color="success"
-                onClick={handleDownload}
-                aria-label="Download image"
-              >
+            <Tooltip title="Download image">
+              <IconButton onClick={handleDownload} color="success">
                 <Download />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Save current view">
+              <IconButton onClick={saveView} color="info">
+                <Bookmark />
               </IconButton>
             </Tooltip>
           </Box>
         </Grid>
 
         {/* Navigation Controls */}
-        <Grid item xs={12}>
+        <Grid item xs={12} sx={{ml: -2}}>
           <Box display="flex" justifyContent="center" gap={0}>
-            <Tooltip title="Move left (also ← key)" placement="top">
-              <IconButton onClick={() => move(50, 0)} aria-label="Move left">
-                <NavigateBefore />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="Move right (also → key)" placement="top">
-              <IconButton onClick={() => move(-50, 0)} aria-label="Move right">
-                <NavigateNext />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="Move up (also ↑ key)" placement="top">
-              <IconButton onClick={() => move(0, 50)} aria-label="Move up">
-                <ArrowUpward />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title="Move down (also ↓ key)" placement="top">
-              <IconButton onClick={() => move(0, -50)} aria-label="Move down">
-                <ArrowDownward />
-              </IconButton>
-            </Tooltip>
+            <IconButton onClick={() => move(50, 0)}>
+              <NavigateBefore />
+            </IconButton>
+            <IconButton onClick={() => move(-50, 0)}>
+              <NavigateNext />
+            </IconButton>
+            <IconButton onClick={() => move(0, 50)}>
+              <ArrowUpward />
+            </IconButton>
+            <IconButton onClick={() => move(0, -50)}>
+              <ArrowDownward />
+            </IconButton>
           </Box>
         </Grid>
 
         {/* Color Scheme Selector */}
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={6} sx={{ml: -2}}>
           <FormControl fullWidth>
             <InputLabel>Color Scheme</InputLabel>
             <Select
-              sx={{ height: 40}}
               value={colorScheme}
               label="Color Scheme"
+              sx={{ height: 40 }}
               onChange={(e) => setColorScheme(e.target.value)}
             >
               <MenuItem value="classic">Classic</MenuItem>
               <MenuItem value="grayscale">Grayscale</MenuItem>
               <MenuItem value="fiery">Fiery</MenuItem>
               <MenuItem value="oceanic">Oceanic</MenuItem>
+              <MenuItem value="psychedelic">Psychedelic</MenuItem>
               <MenuItem value="forest">Forest</MenuItem>
             </Select>
           </FormControl>
         </Grid>
 
-        {/* Iteration Controls */}
         <Grid item xs={12} sm={6}>
-          <Box display="flex" alignItems="center" gap={0}>
-            <Tooltip title="Higher values show more detail but render slower" placement="top">
-              <TextField
-                label="Max Iterations"
-                type="number"
-                value={maxIter}
-                onChange={(e) => setMaxIter(parseInt(e.target.value))}
-                size="small"
-                inputProps={{ min: 10, max: 1000, step: 10 }}
-                sx={{ width: 70 }}
-              />
-            </Tooltip>
-          </Box>
+          <TextField
+            sx={{
+              height: "40px", // Set height
+              "& .MuiInputBase-root": {
+                // Target the input container
+                height: "70px", // Ensure inner elements match
+              },
+              "& .MuiInputBase-input": {
+                // Target the input itself
+                padding: "0 8px", // Reduce padding to fit
+                fontSize: "14px", // Optional: make text smaller
+              },
+            }}
+            label="Max Iterations"
+            type="number"
+            value={maxIter}
+            onChange={(e) => {
+              const value = parseInt(e.target.value);
+              setMaxIter(Math.min(1000, Math.max(10, value || 100)));
+            }}
+            inputProps={{ min: 10, max: 1000 }}
+            fullWidth
+          />
         </Grid>
 
         {/* Julia Set Parameters */}
         {fractalType === "julia" && (
-          <Grid item xs={12} sm={6}>
-            <Box display="flex" alignItems="center" gap={1}>
-              <Tooltip title="Real component of Julia constant" placement="top">
-                <TextField
-                  label="Real"
-                  type="number"
-                  value={juliaCX}
-                  onChange={(e) => setJuliaCX(parseFloat(e.target.value))}
-                  size="small"
-                  inputProps={{ step: "0.01" }}
-                  sx={{ width: 70 }}
-                />
-              </Tooltip>
-              <Tooltip title="Imaginary component of Julia constant" placement="top">
-                <TextField
-                  label="Imaginary"
-                  type="number"
-                  value={juliaCY}
-                  onChange={(e) => setJuliaCY(parseFloat(e.target.value))}
-                  size="small"
-                  inputProps={{ step: "0.01" }}
-                  sx={{ width: 90 }}
-                />
-              </Tooltip>
+          <Grid item xs={12}>
+            <Box display="flex" gap={2} justifyContent="center">
+              <TextField
+                sx={{
+                  height: "40px",
+                  width: "90px", // Set height
+                  "& .MuiInputBase-root": {
+                    // Target the input container
+                    height: "70px", // Ensure inner elements match
+                  },
+                  "& .MuiInputBase-input": {
+                    // Target the input itself
+                    padding: "0 8px", // Reduce padding to fit
+                    fontSize: "14px", // Optional: make text smaller
+                  },
+                }}
+                label="Julia Real"
+                type="number"
+                value={juliaCX}
+                onChange={(e) => setJuliaCX(parseFloat(e.target.value))}
+                inputProps={{ step: "0.01" }}
+              />
+              <TextField
+                label="Julia Imaginary"
+                type="number"
+                value={juliaCY}
+                onChange={(e) => setJuliaCY(parseFloat(e.target.value))}
+                inputProps={{ step: "0.01" }}
+                 sx={{
+                  height: "40px",
+                  width: "90px", // Set height
+                  "& .MuiInputBase-root": {
+                    // Target the input container
+                    height: "70px", // Ensure inner elements match
+                  },
+                  "& .MuiInputBase-input": {
+                    // Target the input itself
+                    padding: "0 8px", // Reduce padding to fit
+                    fontSize: "14px", // Optional: make text smaller
+                  },
+                }}
+              />
             </Box>
           </Grid>
         )}
 
         {/* View History */}
-        <Grid item xs={12}>
-          <Box
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            gap={1}
-          >
-            <Tooltip title="Save current zoom and position" placement="top">
-              <Button variant="outlined" startIcon={<Save />} onClick={saveView}>
-                Save Current View
-              </Button>
-            </Tooltip>
-
-            {viewHistory.length > 0 && (
-              <FormControl sx={{ minWidth: 200 }}>
-                <InputLabel>Load Saved View</InputLabel>
-                <Select
-                  label="Load Saved View"
-                  onChange={(e) => restoreView(e.target.value)}
-                >
-                  <MenuItem value="">Select a view...</MenuItem>
-                  {viewHistory.map((view, i) => (
-                    <MenuItem key={i} value={i}>
-                      {new Date(view.timestamp).toLocaleTimeString()} -{" "}
-                      {view.fractalType} (zoom: {Math.round(view.zoom)})
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-            )}
-          </Box>
-        </Grid>
-
-        {/* Status Info */}
-        <Grid item xs={12}>
-          <Box display="flex" justifyContent="center" alignItems="center" gap={1}>
-            <Typography variant="caption">
-              Zoom: {Math.round(zoom)}x | Position: ({offsetX.toFixed(4)}, {offsetY.toFixed(4)})
+        {viewHistory.length > 0 && (
+          <Grid item xs={12}>
+            <Typography variant="subtitle2" gutterBottom sx={{mt: 0}}>
+              
             </Typography>
-            <Tooltip 
-              title="Mouse coordinates are shown when hovering over the fractal" 
-              placement="top"
-            >
-              <Info fontSize="small" color="action" />
-            </Tooltip>
-          </Box>
-        </Grid>
+            <Box display="flex" gap={1} flexWrap="wrap" justifyContent="center">
+              {viewHistory.map((view, index) => (
+                <Tooltip
+                  key={index}
+                  title={`Zoom: ${Math.round(
+                    view.zoom
+                  )}, X: ${view.offsetX.toFixed(2)}, Y: ${view.offsetY.toFixed(
+                    2
+                  )}`}
+                >
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    startIcon={<History />}
+                    onClick={() => restoreView(index)}
+                  >
+                    View {index + 1}
+                  </Button>
+                </Tooltip>
+              ))}
+            </Box>
+          </Grid>
+        )}
       </Grid>
     </Paper>
   );
