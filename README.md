@@ -24,12 +24,17 @@ A beautiful, interactive fractal visualization tool built with React that lets y
 
 💾 SAVE & SHARE:
 
+
   📸 Download as HD PNG
+  
   🔖 Bookmark favorite views
+  
   ⏱️ View history timeline
 
 
 📱 RESPONSIVE DESIGN:
+
+
     Works on all devices from desktop to smartwatch!
 
 
