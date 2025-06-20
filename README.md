@@ -51,11 +51,11 @@ A beautiful, interactive fractal visualization tool built with React that lets y
 # OutPut Images
 
 1. Burning Ship Fractal
-<img src="https://github.com/user-attachments/assets/718fe076-b03f-43af-9590-dd5158adb3b7" alt="Mandelbrot Set" >
+![Mandelbrot Set](https://github.com/user-attachments/assets/c7144c2d-5c84-46d8-b3cc-61ddc7b97f0c)
 
 2. Burning Ship Fractal
-<img src="https://github.com/user-attachments/assets/718fe076-b03f-43af-9590-dd5158adb3b7" alt="Julia Set" >
+![Julia Set](https://github.com/user-attachments/assets/ce1cab32-4205-4dba-8f5f-496a6115527b)
 
 3. Burning Ship Fractal
-<img src="https://github.com/user-attachments/assets/718fe076-b03f-43af-9590-dd5158adb3b7" alt="Burning Ship Fractal" >
+![Burning Ship Fractal](https://github.com/user-attachments/assets/3e7e9d0b-6e3e-4228-8311-aed5ec1c97a9)
 
