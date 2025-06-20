@@ -22,21 +22,13 @@ A beautiful, interactive fractal visualization tool built with React that lets y
     ↳ Reset: 💫 One-click magic
 
 
-💾 COLOR SCHEMES:  
+💾 SAVE & SHARE:  
 
     ▸ Download as HD PNG          
     ▸ Bookmark favorite views        
     ▸ View history timeline     
 
     
-
-💾 SAVE & SHARE:
-
-  ▸ Download as HD PNG 
-  
-  ▸ Bookmark favorite views
-  
-  ▸ View history timeline
 
 
 📱 RESPONSIVE DESIGN:
