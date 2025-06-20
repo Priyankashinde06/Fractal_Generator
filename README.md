@@ -45,11 +45,7 @@ A beautiful, interactive fractal visualization tool built with React that lets y
     > npm install
 
 3. Run the app
-    ```bash!
-
-    [Mandelbrot Set](https://github.com/user-attachments/assets/c7144c2d-5c84-46d8-b3cc-61ddc7b97f0c)
-![Julia Set](https://github.com/user-attachments/assets/ce1cab32-4205-4dba-8f5f-496a6115527b)
-
+    ```bash
     > npm run dev
 
 # OutPut Images
