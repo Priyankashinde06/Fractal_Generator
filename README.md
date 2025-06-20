@@ -25,8 +25,8 @@ A beautiful, interactive fractal visualization tool built with React that lets y
 🎨 COLOR SCHEMES:  
 
     🔘 Download as HD PNG          
-    🔘 Grayscale        
-    🔘 Psychedelic      
+    🔘 Bookmark favorite views        
+    ▸ View history timeline     
 
     
 
