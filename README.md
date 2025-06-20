@@ -1,12 +1,53 @@
-# React + Vite
+🌌✨ FRACTAL EXPLORER ✨🌌
+A beautiful, interactive fractal visualization tool built with React that lets you explore the infinite complexity of mathematical fractals.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# FEATURES  
 
-Currently, two official plugins are available:
+🔮 FRACTAL REALMS:
+    ▸ Mandelbrot Set - The classic infinite wonder
+    ▸ Julia Set - With ✨adjustable✨ parameters
+    ▸ Burning Ship - The fiery fractal vessel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎨 COLOR SCHEMES:    
+    🔘 Classic         🔘 Fiery
+    🔘 Grayscale    🔘 Oceanic
+    🔘 Psychedelic 🔘 Forest
 
-## Expanding the ESLint configuration
+🕹️ INTERACTIVE CONTROLS:
+    ↳ Zoom: 🖱️ Mouse wheel | 📱 Pinch | [+] [-] buttons
+    ↳ Pan: 👆 Drag | 🏹 Arrow keys
+    ↳ Reset: 💫 One-click magic
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+💾 SAVE & SHARE:
+
+  📸 Download as HD PNG
+  🔖 Bookmark favorite views
+  ⏱️ View history timeline
+
+
+📱 RESPONSIVE DESIGN:
+    Works on all devices from desktop to smartwatch!
+
+⚡ Technologies Used⚡
+    •	React
+    •	Material-UI for UI components
+    •	Canvas API for fractal rendering
+    •	HTML5/JavaScript
+
+# Run Project
+
+1. Clone Git Repo
+    ```bash
+    > git clone https://github.com/Priyankashinde06/Fractal_Generator
+
+2. Install Dependencies
+    ```bash
+    > npm install
+
+3. Run the app
+    ```bash
+    > npm run dev
+
+# OutPut Images
+<img src="https://github.com/user-attachments/assets/718fe076-b03f-43af-9590-dd5158adb3b7" alt="Burning Ship Fractal" height="500" width="500">
+
