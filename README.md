@@ -49,5 +49,5 @@ A beautiful, interactive fractal visualization tool built with React that lets y
     > npm run dev
 
 # OutPut Images
-<img src="https://github.com/user-attachments/assets/718fe076-b03f-43af-9590-dd5158adb3b7" alt="Burning Ship Fractal" height="500" width="500">
+<img src="https://github.com/user-attachments/assets/718fe076-b03f-43af-9590-dd5158adb3b7" alt="Burning Ship Fractal" height="400" width="700">
 
