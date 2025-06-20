@@ -3,20 +3,24 @@ A beautiful, interactive fractal visualization tool built with React that lets y
 
 # FEATURES  
 
-🔮 FRACTAL REALMS:
+🔮 FRACTAL TYPES:
+
     ▸ Mandelbrot Set - The classic infinite wonder
     ▸ Julia Set - With ✨adjustable✨ parameters
     ▸ Burning Ship - The fiery fractal vessel
 
-🎨 COLOR SCHEMES:    
+🎨 COLOR SCHEMES:  
+
     🔘 Classic         🔘 Fiery
     🔘 Grayscale    🔘 Oceanic
     🔘 Psychedelic 🔘 Forest
 
 🕹️ INTERACTIVE CONTROLS:
+
     ↳ Zoom: 🖱️ Mouse wheel | 📱 Pinch | [+] [-] buttons
     ↳ Pan: 👆 Drag | 🏹 Arrow keys
     ↳ Reset: 💫 One-click magic
+
 
 💾 SAVE & SHARE:
 
