@@ -21,6 +21,15 @@ A beautiful, interactive fractal visualization tool built with React that lets y
     ↳ Pan: 👆 Drag | 🏹 Arrow keys
     ↳ Reset: 💫 One-click magic
 
+
+🎨 COLOR SCHEMES:  
+
+    🔘 Classic          🔘 Fiery
+    🔘 Grayscale        🔘 Oceanic
+    🔘 Psychedelic      🔘 Forest
+
+    
+
 💾 SAVE & SHARE:
 
   ▸ Download as HD PNG 
