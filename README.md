@@ -50,10 +50,10 @@ A beautiful, interactive fractal visualization tool built with React that lets y
 
 # OutPut Images
 
-1. Burning Ship Fractal
+1. Mandelbrot Set Fractal
 ![Mandelbrot Set](https://github.com/user-attachments/assets/c7144c2d-5c84-46d8-b3cc-61ddc7b97f0c)
 
-2. Burning Ship Fractal
+2. Julia Set Fractal
 ![Julia Set](https://github.com/user-attachments/assets/ce1cab32-4205-4dba-8f5f-496a6115527b)
 
 3. Burning Ship Fractal
