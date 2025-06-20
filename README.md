@@ -24,15 +24,9 @@ A beautiful, interactive fractal visualization tool built with React that lets y
 💾 SAVE & SHARE:
 
   📸 Download as HD PNG
-  
   🔖 Bookmark favorite views
-  
   ⏱️ View history timeline
-  
-•	React
-    •	Material-UI for UI components
-    •	Canvas API for fractal rendering
-    •	HTML5/JavaScript
+
 
 📱 RESPONSIVE DESIGN:
 
