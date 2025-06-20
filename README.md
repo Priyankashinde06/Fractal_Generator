@@ -21,9 +21,7 @@ A beautiful, interactive fractal visualization tool built with React that lets y
     ↳ Pan: 👆 Drag | 🏹 Arrow keys
     ↳ Reset: 💫 One-click magic
 
-
 💾 SAVE & SHARE:
-
 
   📸 Download as HD PNG
   
