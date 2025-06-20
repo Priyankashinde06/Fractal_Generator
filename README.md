@@ -1,8 +1,8 @@
-🌌✨ FRACTAL EXPLORER ✨🌌Add commentMore actions
-
-Demo Link : https://fractal-generator-bice.vercel.app/
+🌌✨ FRACTAL EXPLORER ✨🌌
 
 A beautiful, interactive fractal visualization tool built with React that lets you explore the infinite complexity of mathematical fractals.
+
+Demo Link : https://fractal-generator-bice.vercel.app/
 
 # FEATURES  
 
